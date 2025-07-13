@@ -1,0 +1,98 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title >Masaje Relajante | Raíces del Alma</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: bisque;
+        }
+        h1.text-center {
+            font-size: 75px;
+            
+        }
+        .titulo {
+            font-family: 'Playfair Display', serif;
+            color: crimson;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .img-masaje {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .lista{
+            font-size: 25px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container py-5">
+        <h1 class="text-center titulo" >Masaje Relajante</h1>
+        <p style="font-size: 45px;">Técnica suave y armoniosa que ayuda a liberar tensiones, reducir el estrés y reconectar con tu cuerpo. Ideal para quienes buscan descanso profundo y bienestar emocional.</p>
+        
+
+        <div class="text-center my-5">
+            <img src="{% static 'polls/img/foto4.jpg' %}" alt="Masaje Relajante" class="img-masaje">
+        </div>
+
+        
+    </div>
+    <div class="text-center">
+        <h2>🌿 Beneficios del Masaje Relajante</h2>
+<h3>😌 Bienestar físico</h3>
+<li>Reduce el estrés y la ansiedad
+Disminuye los niveles de cortisol (hormona del estrés) y promueve la sensación de calma.</li>
+
+<li>Relaja los músculos tensos
+Ideal para contracturas leves, sobrecarga muscular o simplemente para liberar tensiones.</li>
+
+<li>Mejora la circulación sanguínea y linfática
+Estimula el flujo de sangre y ayuda a eliminar toxinas del cuerpo.</li>
+
+<li>Disminuye la presión arterial
+Relajación profunda que beneficia el sistema cardiovascular.</li>
+
+<li>Favorece el sueño reparador
+Ideal para personas con insomnio o descanso liviano.</li>
+
+<h2>🧠 Bienestar mental y emocional</h2>
+<li>Aumenta la serotonina y dopamina
+Estas hormonas están asociadas con el bienestar y la felicidad.</li>
+
+<li>Conecta con el cuerpo
+Brinda una pausa consciente, ayudando a desconectar del ritmo acelerado cotidiano.</li>
+
+<li>Reduce la fatiga y el agotamiento
+Recarga la energía física y emocional, especialmente en épocas de mucha demanda.</li>
+
+<h2>🧘‍♀️ Otros beneficios</h2>
+<li>Estimula el sistema inmunológico
+Al reducir el estrés, fortalece las defensas naturales del cuerpo.</li>
+
+<li>Alivia dolores de cabeza y cervicales
+Muy efectivo para quienes pasan muchas horas frente a la computadora o bajo tensión constante.</li>
+
+<h2>🕒 ¿Con qué frecuencia se recomienda?</h2>
+<li>1 vez por semana o cada 15 días, según el nivel de estrés o necesidades físicas del cliente.</li>
+    </div>
+    
+        <div class="text-center">
+            <a href="{% url 'polls:index' %}" class="btn btn-outline-danger">← Volver al inicio</a>
+        </div>
+
+</body>
+<footer class="bg-light text-center text-muted py-4 mt-5">
+        <div class="container">
+            <p class="mb-1">&copy; 2025 Raíces del Alma. Todos los derechos reservados.</p>
+            <p> class="mb-0">Masajes · Bienestar · Energía · Sanación</p>
+        </div>
+</footer>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <style>
+        body {
+            background: bisque;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            padding: 30px;
+            background-color: #fff;
+        }
+        h2 {
+            color: #6d4c41;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        .detalle {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f5f3;
+        }
+        .detalle p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>📅 Confirmación de Turno</h2>
+
+    <div class="detalle">
+        <p><strong>Nombre:</strong> {{ turno.nombre }}</p>
+        <p><strong>Email:</strong> {{ turno.email }}</p>
+        <p><strong>Teléfono:</strong> {{ turno.telefono }}</p>
+        <p><strong>Fecha:</strong> {{ turno.fecha }}</p>
+        <p><strong>Hora:</strong> {{ turno.hora }}</p>
+        <p><strong>Tipo de masaje:</strong> {{ turno.tipo }}</p>
+    </div>
+
+    <form method="post" action="{% url 'polls:cancelar_turno' turno.id %}">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger mt-3">Cancelar turno</button>
+</form>
+
+    
+</body>
+</html>

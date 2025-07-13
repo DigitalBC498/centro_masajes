@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Centro de Masajes - Inicio</title>
+    <style>
+      body {
+        background: bisque;
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 40px auto;
+        text-align: center;
+      }
+      h1 {
+        color: #2c3e50;
+      }
+      
+      .botones {
+        margin-top: 30px;
+      }
+      .botones a {
+        display: inline-block;
+        background-color: #27ae60;
+        color: white;
+        padding: 15px 25px;
+        margin: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+      }
+      .botones a:hover {
+        background-color: #2ecc71;
+      }
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 65px;">Bienvenido al Centro de Masajes</h1>
+    <div class="botones">
+        <a href="{% url 'polls:masaje_facial' %}?tipo=ver beneficios">VER BENEFICIOS DE MASAJES FACIAL</a>
+    <BR></BR>
+    </div>
+
+    <div class="botones">
+        <a href="{% url 'polls:masaje_relajante' %}?tipo=ver beneficios">VER BENEFICIOS DE MASAJES RELAJANTE</a>
+    <BR></BR>
+    </div>
+
+    <div class="botones">
+        <a href="{% url 'polls:masaje_descontracturante' %}?tipo=ver beneficios">VER BENEFICIOS DE MASAJES DESCONTRACTURANTE</a>
+    <BR></BR>
+    </div>
+    
+    <p style="font-size: 35px;">Elegí el tipo de masaje para reservar tu turno:</p>
+    <div class="botones">
+
+    <a href="{% url 'polls:tomar_turno' %}?tipo=masaje_relajante">Masaje Relajante</a>
+    <a href="{% url 'polls:tomar_turno' %}?tipo=masaje_descontracturante">Masaje Descontracturante</a>
+    <a href="{% url 'polls:tomar_turno' %}?tipo=masaje_facial">Masaje Facial</a>
+
+
+</div>
+
+    <div class="botones">
+        <a href="{% url 'polls:lista_turnos' %}" class="btn btn-outline-info mt-3">Ver turnos</a>
+    <BR></BR>
+    </div>
+    
+
+
+</body>
+</html>
+
