@@ -8,7 +8,7 @@ urlpatterns=[
     path("masaje-facial/", views.masaje_facial, name="masaje_facial"), 
     path("masaje-relajante/", views.masaje_relajante, name="masaje_relajante"),
     path("masaje-descontracturante/", views.masaje_descontracturante, name="masaje_descontracturante"),
-    path('tomar-turno/', views.tomar_turno, name='tomar_turno'),
+    path('tomar-turno/', views.turno_forms, name='turno_fotms'),
     path('cancelar-turno/<int:turno_id>/', views.cancelar_turno, name='cancelar_turno'),
 
     path('turnos/', views.lista_turnos, name='lista_turnos'),
