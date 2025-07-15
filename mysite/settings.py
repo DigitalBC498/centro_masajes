@@ -6,7 +6,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Seguridad
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-*)ofs@3zef3804t**6=a50&*!!c9&ko*on-$h5o8awk5c+n!6e')
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '.onrender.com').split(',')
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+
 
 # Aplicaciones
 INSTALLED_APPS = [

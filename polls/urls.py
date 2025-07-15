@@ -13,6 +13,8 @@ urlpatterns=[
 
     path('turnos/', views.lista_turnos, name='lista_turnos'),
     path('turnos/limpiar/', views.limpiar_turnos, name='limpiar_turnos'),
+    path('', lambda request: redirect('polls/', permanent=False)),
+    path('polls/', include('polls.urls')),
 
 
 

@@ -44,6 +44,12 @@
     <button type="submit" class="btn btn-danger mt-3">Cancelar turno</button>
 </form>
 
+    <form method="post" action="{% url 'polls:index'%}">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger mt-3">Volver al inicio</button>
+</form>
+
+
     
 </body>
 </html>
