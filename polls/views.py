@@ -38,7 +38,7 @@ def masaje_relajante(request):
 def masaje_descontracturante(request):
     return render(request, 'polls/masaje_descontracturante.html')
 
-def tomar_turno(request):
+def turno_forms(request):
     if request.method == 'POST':
         if request.POST.get('accion') == 'cancelar':
             return redirect('polls:index')  # o a donde quieras volver
