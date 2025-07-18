@@ -20,6 +20,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 
 from django.views.decorators.csrf import csrf_exempt
 
+from django.contrib.auth.decorators import login_required
+
 # Vista principal (lista de preguntas)
 def index(request):
     context = {
@@ -36,13 +38,7 @@ def masaje_relajante(request):
 def masaje_descontracturante(request):
     return render(request, 'polls/masaje_descontracturante.html')
 
-<<<<<<< HEAD
 def turno_forms(request):
-=======
-def tomar_turno(request):
-    tipo = request.GET.get('tipo')  # valor como "relajante", "facial", etc.
-    
->>>>>>> 7b74171 (Agregado formulario de contacto y estilos nuevos)
     if request.method == 'POST':
         if request.POST.get('accion') == 'cancelar':
             return redirect('polls:index')
@@ -80,11 +76,32 @@ def limpiar_turnos(request):
     if request.method == 'POST':
         Turno.objects.all().delete()
         return redirect('polls:lista_turnos')  # o donde quieras redirigir
-    
+
+
+@login_required(login_url='/accounts/login/') 
 def panel_turnos_privado(request):
     turnos = Turno.objects.all().order_by('fecha')  # o como esté tu modelo
     return render(request, 'polls/panel_turnos.html', {'turnos': turnos})
 
+def salir_del_panel(request):
+    logout(request)
+    return redirect('polls:index')
+
+def tomar_turno(request):
+    tipo = request.GET.get('tipo')  # valor como "relajante", "facial", etc.
+    
+    if request.method == 'POST':
+        if request.POST.get('accion') == 'cancelar':
+            return redirect('polls:index')
+
+        form = TurnoForm(request.POST)
+        if form.is_valid():
+            turno = form.save()
+            return render(request, 'polls/confirmacion_pdf.html', {'turno': turno})
+    else:
+        form = TurnoForm(initial={'tipo_masaje': tipo})
+
+    return render(request, 'polls/tomar_turno.html', {'form': form})
 
 
 

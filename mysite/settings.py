@@ -92,3 +92,10 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'tucorreo@gmail.com'
 EMAIL_HOST_PASSWORD = 'qrtb ucdo rmle iaaz'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+
+LOGIN_URL = '/accounts/login/'  # ruta al login
+LOGIN_REDIRECT_URL = '/polls/panel-super-privado-987/'  # a dónde va después de loguearse
+LOGOUT_REDIRECT_URL = '/accounts/login/'  # a dónde va después de cerrar sesión
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
