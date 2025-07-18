@@ -1,0 +1,20 @@
+<!-- polls/templates/polls/tomar_turno.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservar Turno</title>
+</head>
+<body style="background:  bisque;;">
+    <h1>Reservar Turno</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Reservar</button>
+    </form>
+
+    <div class="text-center">
+            <a href="{% url 'polls:index' %}" class="btn btn-outline-danger">← Volver al inicio</a>
+        </div>
+</body>
+</html>
