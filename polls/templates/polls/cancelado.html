@@ -3,18 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <title>Turno Cancelado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<style>
-    body{
-        background:bisque ;
+
+    <style>
+    body {
+        background: bisque;
     }
-</style>
-<body class=  text-white d-flex justify-content-center align-items-center vh-100">
+
+    h1 {
+        color: #dc3545; /* rojo Bootstrap */
+        font-size: 3rem;
+        animation: fadeInDown 1s ease-out;
+    }
+
+    p {
+        color: #333;
+        font-size: 1.5rem;
+    }
+
+    a.btn {
+        font-size: 1.25rem;
+    }
+
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (min-width: 992px) {
+        html {
+            font-size: 2rem;
+        }
+
+        label, input, select, button {
+            font-size: 2rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        html {
+            font-size: 1.25rem;
+        }
+
+        label, input, select, button {
+            font-size: 1.25rem;
+        }
+
+        button {
+            padding: 0.75rem 1rem;
+        }
+    }
+    </style>
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100">
     <div class="text-center">
         <h1>❌ Turno cancelado</h1>
         <p class="lead">Lamentamos que no puedas asistir. Podés reservar otro turno cuando quieras.</p>
-        <a href="{% url 'polls:index' %}" class="btn btn-light mt-4">Volver al inicio</a>
+        <a href="{% url 'polls:index' %}" class="btn btn-dark mt-4">Volver al inicio</a>
     </div>
 </body>
 </html>

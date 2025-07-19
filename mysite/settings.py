@@ -12,6 +12,7 @@ ALLOWED_HOSTS = ['centro-masajes-turnos.onrender.com', 'localhost', '127.0.0.1']
 
 # Aplicaciones
 INSTALLED_APPS = [
+    'widget_tweaks',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',

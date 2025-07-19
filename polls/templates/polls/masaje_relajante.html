@@ -4,7 +4,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title >Masaje Relajante | Raíces del Alma</title>
+    <title>Masaje Relajante | Raíces del Alma</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -12,7 +13,6 @@
         }
         h1.text-center {
             font-size: 75px;
-            
         }
         .titulo {
             font-family: 'Playfair Display', serif;
@@ -27,72 +27,111 @@
         }
         .lista{
             font-size: 25px;
-            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            text-align: left;
+        }
+         /* Aumentar legibilidad en pantallas grandes */
+        @media (min-width: 992px) {
+            html {
+                font-size: 2rem;
+            }
+
+            label, input, select, button {
+                font-size: 2rem;
+            }
         }
 
+        /* Mejor legibilidad en pantallas muy chicas (menos de 480px) */
+        @media (max-width: 480px) {
+            html {
+                font-size: 1.25rem;
+            }
+
+            label, input, select, button {
+                font-size: 1.25rem;
+            }
+
+            button {
+                padding: 0.75rem 1rem;
+            }
+        }
     </style>
 </head>
 <body>
 
     <div class="container py-5">
-        <h1 class="text-center titulo" >Masaje Relajante</h1>
-        <p style="font-size: 45px;">Técnica suave y armoniosa que ayuda a liberar tensiones, reducir el estrés y reconectar con tu cuerpo. Ideal para quienes buscan descanso profundo y bienestar emocional.</p>
-        
+        <h1 class="text-center titulo">Masaje Relajante</h1>
+        <p style="font-size: 45px;">
+            Técnica suave y armoniosa que ayuda a liberar tensiones, reducir el estrés y reconectar con tu cuerpo. Ideal para quienes buscan descanso profundo y bienestar emocional.
+        </p>
 
         <div class="text-center my-5">
             <img src="{% static 'polls/img/foto4.jpg' %}" alt="Masaje Relajante" class="img-masaje">
         </div>
 
+        <div class="text-center">
+            <h2>🌿 Beneficios del Masaje Relajante</h2>
+
+            <h3>😌 Bienestar físico</h3>
+            <ul class="lista">
+                <li>Reduce el estrés y la ansiedad
+                    Disminuye los niveles de cortisol (hormona del estrés) y promueve la sensación de calma.
+                </li>
+                <li>Relaja los músculos tensos
+                    Ideal para contracturas leves, sobrecarga muscular o simplemente para liberar tensiones.
+                </li>
+                <li>Mejora la circulación sanguínea y linfática
+                    Estimula el flujo de sangre y ayuda a eliminar toxinas del cuerpo.
+                </li>
+                <li>Disminuye la presión arterial
+                    Relajación profunda que beneficia el sistema cardiovascular.
+                </li>
+                <li>Favorece el sueño reparador
+                    Ideal para personas con insomnio o descanso liviano.
+                </li>
+            </ul>
+
+            <h2>🧠 Bienestar mental y emocional</h2>
+            <ul class="lista">
+                <li>Aumenta la serotonina y dopamina
+                    Estas hormonas están asociadas con el bienestar y la felicidad.
+                </li>
+                <li>Conecta con el cuerpo
+                    Brinda una pausa consciente, ayudando a desconectar del ritmo acelerado cotidiano.
+                </li>
+                <li>Reduce la fatiga y el agotamiento
+                    Recarga la energía física y emocional, especialmente en épocas de mucha demanda.
+                </li>
+            </ul>
+
+            <h2>🧘‍♀️ Otros beneficios</h2>
+            <ul class="lista">
+                <li>Estimula el sistema inmunológico
+                    Al reducir el estrés, fortalece las defensas naturales del cuerpo.
+                </li>
+                <li>Alivia dolores de cabeza y cervicales
+                    Muy efectivo para quienes pasan muchas horas frente a la computadora o bajo tensión constante.
+                </li>
+            </ul>
+
+            <h2>🕒 ¿Con qué frecuencia se recomienda?</h2>
+            <ul class="lista">
+                <li>1 vez por semana o cada 15 días, según el nivel de estrés o necesidades físicas del cliente.</li>
+            </ul>
+        </div>
         
-    </div>
-    <div class="text-center">
-        <h2>🌿 Beneficios del Masaje Relajante</h2>
-<h3>😌 Bienestar físico</h3>
-<li>Reduce el estrés y la ansiedad
-Disminuye los niveles de cortisol (hormona del estrés) y promueve la sensación de calma.</li>
-
-<li>Relaja los músculos tensos
-Ideal para contracturas leves, sobrecarga muscular o simplemente para liberar tensiones.</li>
-
-<li>Mejora la circulación sanguínea y linfática
-Estimula el flujo de sangre y ayuda a eliminar toxinas del cuerpo.</li>
-
-<li>Disminuye la presión arterial
-Relajación profunda que beneficia el sistema cardiovascular.</li>
-
-<li>Favorece el sueño reparador
-Ideal para personas con insomnio o descanso liviano.</li>
-
-<h2>🧠 Bienestar mental y emocional</h2>
-<li>Aumenta la serotonina y dopamina
-Estas hormonas están asociadas con el bienestar y la felicidad.</li>
-
-<li>Conecta con el cuerpo
-Brinda una pausa consciente, ayudando a desconectar del ritmo acelerado cotidiano.</li>
-
-<li>Reduce la fatiga y el agotamiento
-Recarga la energía física y emocional, especialmente en épocas de mucha demanda.</li>
-
-<h2>🧘‍♀️ Otros beneficios</h2>
-<li>Estimula el sistema inmunológico
-Al reducir el estrés, fortalece las defensas naturales del cuerpo.</li>
-
-<li>Alivia dolores de cabeza y cervicales
-Muy efectivo para quienes pasan muchas horas frente a la computadora o bajo tensión constante.</li>
-
-<h2>🕒 ¿Con qué frecuencia se recomienda?</h2>
-<li>1 vez por semana o cada 15 días, según el nivel de estrés o necesidades físicas del cliente.</li>
-    </div>
-    
         <div class="text-center">
             <a href="{% url 'polls:index' %}" class="btn btn-outline-danger">← Volver al inicio</a>
         </div>
 
+    </div>
+
 </body>
 <footer class="bg-light text-center text-muted py-4 mt-5">
-        <div class="container">
-            <p class="mb-1">&copy; 2025 Raíces del Alma. Todos los derechos reservados.</p>
-            <p> class="mb-0">Masajes · Bienestar · Energía · Sanación</p>
-        </div>
+    <div class="container">
+        <p class="mb-1">&copy; 2025 Raíces del Alma. Todos los derechos reservados.</p>
+        <p class="mb-0">Masajes · Bienestar · Energía · Sanación</p>
+    </div>
 </footer>
 </html>

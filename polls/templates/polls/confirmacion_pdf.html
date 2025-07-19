@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <title>Confirmación de Turno</title>
     <style>
         body {
-            background: bisque;
             font-family: Arial, sans-serif;
-            font-size: 14px;
-            padding: 30px;
-            background-color: #fff;
+            font-size: 12pt;
+            color: #333333;
+            margin: 30px;
+            background-color: #ffffff;
         }
+
         h2 {
-            color: #6d4c41;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 10px;
+            color: #5D4037;
+            border-bottom: 1px solid #999999;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
         }
+
         .detalle {
-            margin-top: 20px;
+            border: 1px solid #999999;
+            background-color: #f2f2f2;
             padding: 15px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            background-color: #f9f5f3;
+            border-radius: 5px;
         }
+
         .detalle p {
-            margin: 5px 0;
+            margin: 8px 0;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 10pt;
+            color: #777777;
         }
     </style>
 </head>
 <body>
-    <h2>📅 Confirmación de Turno</h2>
+
+    <h2>Confirmación de Turno</h2>
 
     <div class="detalle">
         <p><strong>Nombre:</strong> {{ turno.nombre }}</p>
@@ -39,17 +50,10 @@
         <p><strong>Tipo de masaje:</strong> {{ turno.tipo }}</p>
     </div>
 
-    <form method="post" action="{% url 'polls:cancelar_turno' turno.id %}">
-    {% csrf_token %}
-    <button type="submit" class="btn btn-danger mt-3">Cancelar turno</button>
-</form>
+    <div class="footer">
+        <p>Gracias por confiar en nosotros. Te esperamos con alegría. 🌿</p>
+        <p>Centro de Masajes Raíces del Alma</p>
+    </div>
 
-    <form method="post" action="{% url 'polls:index'%}">
-    {% csrf_token %}
-    <button type="submit" class="btn btn-danger mt-3">Volver al inicio</button>
-</form>
-
-
-    
 </body>
 </html>

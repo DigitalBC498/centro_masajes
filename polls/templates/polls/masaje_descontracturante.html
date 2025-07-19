@@ -1,37 +1,60 @@
-
-
-<!DOCTYPE html>
 {% load static %}
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Masaje Descontracturante | Raíces del Alma</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <head>
-  <!-- Bootstrap (si estás usándolo) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- Font Awesome para íconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Google Fonts: Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
 
     <style>
+         /* Aumentar legibilidad en pantallas grandes */
+        @media (min-width: 992px) {
+            html {
+                font-size: 2rem;
+            }
+
+            label, input, select, button {
+                font-size: 2rem;
+            }
+        }
+
+        /* Mejor legibilidad en pantallas muy chicas (menos de 480px) */
+        @media (max-width: 480px) {
+            html {
+                font-size: 1.25rem;
+            }
+
+            label, input, select, button {
+                font-size: 1.25rem;
+            }
+
+            button {
+                padding: 0.75rem 1rem;
+            }
+        }
+
         body {
             background-color: bisque;
         }
-        h1.text-center{
+        h1.text-center {
             font-size: 75px;
-        }
-        h3.text-center{
-            font-size: 45px;
-        }
-        .titulo {
             font-family: 'Playfair Display', serif;
             color: crimson;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
         }
-        p.lead{
-            
+        h3.text-center {
+            font-size: 45px;
+        }
+        p.lead {
             font-size: 35px;
         }
         .img-masaje {
@@ -40,70 +63,64 @@
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        .lista{
+        .lista {
             font-size: 30px;
+        }
+        ul.lista {
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
         }
     </style>
 </head>
 <body>
 
     <div class="container py-5">
-        <h1 class="text-center titulo">Masaje Descontracturante</h1>
+        <h1 class="text-center">Masaje Descontracturante</h1>
 
         <p class="lead text-center mt-4">
             Técnica manual profunda enfocada en aliviar contracturas, rigidez y tensión muscular. Ideal para personas con dolores crónicos, mala postura o sobrecarga física y mental.
         </p>
 
         <div class="text-center my-5">
-            <img src="{% static 'polls/img/foto5.jpg' %}" alt="Masaje Descontracturante" class="img-masaje">
+            <img src="{% static 'polls/img/foto5.jpg' %}" alt="Masaje Descontracturante" class="img-masaje" />
         </div>
 
         <div>
             <h2>💪 Beneficios del Masaje Descontracturante</h2>
-<h3>🧍‍♀️ Físicos</h3>
-<li>Elimina contracturas musculares
-Libera la tensión acumulada en zonas como espalda, cuello y hombros.</li>
 
-<li>Disminuye el dolor muscular
-Alivia molestias causadas por mala postura, esfuerzo físico o estrés.</li>
+            <h3>🧍‍♀️ Físicos</h3>
+            <ul class="lista">
+                <li>Elimina contracturas musculares: libera la tensión acumulada en zonas como espalda, cuello y hombros.</li>
+                <li>Disminuye el dolor muscular: alivia molestias causadas por mala postura, esfuerzo físico o estrés.</li>
+                <li>Mejora la movilidad articular y flexibilidad: al relajar los músculos, se amplía el rango de movimiento.</li>
+                <li>Estimula la circulación sanguínea y linfática: ayuda a oxigenar los tejidos y eliminar toxinas acumuladas.</li>
+                <li>Reduce la inflamación muscular: gracias a la activación del flujo sanguíneo y la relajación profunda.</li>
+            </ul>
 
-<li>Mejora la movilidad articular y flexibilidad
-Al relajar los músculos, se amplía el rango de movimiento.</li>
+            <h3>🧠 Mentales y emocionales</h3>
+            <ul class="lista">
+                <li>Disminuye el estrés y la tensión mental: aunque es más intenso que un masaje relajante, también genera bienestar emocional.</li>
+                <li>Aumenta la sensación de liviandad y bienestar: la liberación muscular trae un alivio físico inmediato que impacta en el estado de ánimo.</li>
+                <li>Mejora el descanso y la calidad del sueño: al relajar el cuerpo profundamente, favorece un sueño reparador.</li>
+            </ul>
 
-<li>Estimula la circulación sanguínea y linfática
-Ayuda a oxigenar los tejidos y eliminar toxinas acumuladas.</li>
+            <h2>📍 ¿Cuándo se recomienda?</h2>
+            <ul class="lista">
+                <li>En casos de dolores localizados, contracturas crónicas, trabajo físico exigente, posturas inadecuadas o estrés acumulado.</li>
+                <li>Ideal también para personas que entrenan o pasan muchas horas sentadas frente a la computadora.</li>
+            </ul>
 
-<li>Reduce la inflamación muscular
-Gracias a la activación del flujo sanguíneo y la relajación profunda.</li>
-
-<h3>🧠 Mentales y emocionales</h3>
-<li>Disminuye el estrés y la tensión mental
-Aunque es más intenso que un masaje relajante, también genera bienestar emocional.</li>
-
-<li>Aumenta la sensación de liviandad y bienestar
-La liberación muscular trae un alivio físico inmediato que impacta en el estado de ánimo.</li>
-
-<li>Mejora el descanso y la calidad del sueño
-Al relajar el cuerpo profundamente, favorece un sueño reparador.</li>
-
-<h2>📍 ¿Cuándo se recomienda?</h2>
-<li>En casos de dolores localizados, contracturas crónicas, trabajo físico exigente, posturas inadecuadas o estrés acumulado.</li>
-
-<li>Ideal también para personas que entrenan o pasan muchas horas sentadas frente a la computadora.</li>
-
-<h2></h2>
-<li>1 vez por semana en casos intensos.
-
-Cada 15 a 30 días para mantenimiento y prevención.</li>
+            <h2>Frecuencia recomendada</h2>
+            <ul class="lista">
+                <li>1 vez por semana en casos intensos.</li>
+                <li>Cada 15 a 30 días para mantenimiento y prevención.</li>
+            </ul>
         </div>
 
         <div class="text-center">
             <a href="{% url 'polls:index' %}" class="btn btn-outline-danger">← Volver al inicio</a>
         </div>
-    
-    
-
-</body>
+    </div>
 
 <footer class="bg-light text-center text-muted py-4 mt-5">
     <div class="container">
@@ -111,4 +128,6 @@ Cada 15 a 30 días para mantenimiento y prevención.</li>
         <p class="mb-0">Masajes · Bienestar · Energía · Sanación</p>
     </div>
 </footer>
+
+</body>
 </html>

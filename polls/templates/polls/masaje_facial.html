@@ -1,102 +1,46 @@
-{% load static %}
+<div class="text-center">
+    <h2>🌿 Beneficios del Masaje Facial</h2>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Masaje Facial | Raíces del Alma</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: bisque;
-        }
-        h1.text-center{
+    <h3>🧖‍♀️ Estéticos</h3>
+    <ul class="lista">
+        <li>Mejora la circulación sanguínea
+            Favorece la oxigenación de la piel y le da un aspecto más radiante.
+        </li>
+        <li>Estimula la producción de colágeno y elastina
+            Ayuda a mantener la firmeza y elasticidad del rostro, retrasando los signos del envejecimiento.
+        </li>
+        <li>Reduce líneas de expresión y arrugas finas
+            Al relajar los músculos faciales, se disminuye la tensión que forma arrugas.
+        </li>
+        <li>Desinflama bolsas y ojeras
+            Estimula el drenaje linfático, lo que reduce la hinchazón y mejora el aspecto del contorno de ojos.
+        </li>
+        <li>Afina y tonifica el rostro
+            Mejora el contorno facial, brindando un efecto “lifting” natural y temporal.
+        </li>
+        <li>Mejora la absorción de productos cosméticos
+            Después del masaje, la piel está más receptiva a cremas, aceites o sérums.
+        </li>
+    </ul>
 
-            font-size: 75px;
-            font-family: 'Playfair Display', serif;
-            color: crimson;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-        }
-        .img-masaje {
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        p.lead{
-            font-size: 45px;
-        }
-    </style>
+    <h3>😌 Relajación y bienestar</h3>
+    <ul class="lista">
+        <li>Disminuye el estrés y la ansiedad
+            Relaja los músculos del rostro y del cuerpo, generando una sensación general de bienestar.
+        </li>
+        <li>Alivia dolores de cabeza y tensión mandibular
+            Ideal para personas con bruxismo o que sufren de cefaleas por tensión.
+        </li>
+        <li>Estimula puntos energéticos (acupresión)
+            Si se hace con técnicas orientales, puede ayudar a equilibrar la energía del cuerpo.
+        </li>
+    </ul>
 
-
-</head>
-<body>
-
-    <div class="container py-5">
-        <h1 class="text-center titulo">Masaje Facial</h1>
-
-        <p class="lead text-center mt-4">
-            El masaje facial estimula la circulación, relaja los músculos del rostro, mejora la oxigenación de la piel
-            y proporciona una profunda sensación de bienestar.
-        </p>
-
-        <div class="text-center my-5">
-            <img src="{% static 'polls/img/foto3.jpg' %}" alt="Masaje Facial" class="img-masaje">
-        </div>
-        <div class="text-center">
-            <h2>🌿 Beneficios del Masaje Facial</h2>
-<h3>🧖‍♀️ Estéticos</h3>
- <li>Mejora la circulación sanguínea
-Favorece la oxigenación de la piel y le da un aspecto más radiante.</li>
-
-<li>Estimula la producción de colágeno y elastina
-Ayuda a mantener la firmeza y elasticidad del rostro, retrasando los signos del envejecimiento.</li>
-
-<li>Reduce líneas de expresión y arrugas finas
-Al relajar los músculos faciales, se disminuye la tensión que forma arrugas.</li>
-
-<li>Desinflama bolsas y ojeras
-Estimula el drenaje linfático, lo que reduce la hinchazón y mejora el aspecto del contorno de ojos.</li>
-
-<li>Afina y tonifica el rostro
-Mejora el contorno facial, brindando un efecto “lifting” natural y temporal.</li>
-
-<li>Mejora la absorción de productos cosméticos
-Después del masaje, la piel está más receptiva a cremas, aceites o sérums.</li>
-
-<h3>😌 Relajación y bienestar</h3>
-<li>Disminuye el estrés y la ansiedad
-Relaja los músculos del rostro y del cuerpo, generando una sensación general de bienestar.</li>
-
-<li>Alivia dolores de cabeza y tensión mandibular
-Ideal para personas con bruxismo o que sufren de cefaleas por tensión.</li>
-
-<li>Estimula puntos energéticos (acupresión)
-Si se hace con técnicas orientales, puede ayudar a equilibrar la energía del cuerpo.</li>
-
-<h3>🕒 ¿Con qué frecuencia hacerlo?</h3>
-<li>1 a 2 veces por semana es ideal para mantener la piel tonificada y relajada.
-Puede hacerse diariamente si se realiza en casa con movimientos suaves.
-</li>
-        </div>
-            
-
-
-
-        <div class="text-center">
-            <a href="{% url 'polls:index' %}" class="btn btn-outline-danger">← Volver al inicio</a>
-        </div>
-        
-    </div>
-    
-</body>
-
-<footer class="bg-light text-center text-muted py-4 mt-5">
-    <div class="container">
-        <p class="mb-1">&copy; 2025 Raíces del Alma. Todos los derechos reservados.</p>
-        <p class="mb-0">Masajes · Bienestar · Energía · Sanación</p>
-    </div>
-
-</footer>
-</html>
+    <h3>🕒 ¿Con qué frecuencia hacerlo?</h3>
+    <ul class="lista">
+        <li>1 a 2 veces por semana es ideal para mantener la piel tonificada y relajada.
+            Puede hacerse diariamente si se realiza en casa con movimientos suaves.
+        </li>
+    </ul>
+</div>
 
